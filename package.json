@@ -1,0 +1,19 @@
+{
+  "name": "wadofgum-keymap",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -a code -c -v"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.5.1"
+  },
+  "devDependencies": {
+    "code": "^2.1.0",
+    "lab": "^9.1.0",
+    "wadofgum": "^5.1.0"
+  }
+}
