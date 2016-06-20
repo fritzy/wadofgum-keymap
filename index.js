@@ -14,6 +14,10 @@ module.exports = (baseClass) => {
 
     remapKeys (obj, map) {
 
+      if (Array.isArray(obj)) {
+        return obj.map(key => map[key] || key);
+      }
+
       return lodash.mapKeys(obj, (value, key) => {
 
         if (map.hasOwnProperty(key)) {

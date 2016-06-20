@@ -57,5 +57,24 @@ lab.experiment('test wadofgum-keymap', () => {
     expect(revobj.okay).to.equal(1);
 
     done();
-  })
+  });
+
+  lab.test('test mapping of array', (done) => {
+
+    const TestModel = new WKM({
+      keyMap: {
+        inkey: 'outkey',
+        inkey2: 'outkey2'
+      }
+    });
+
+    const myobj = ['inkey', 'inkey2', 'okay'];
+    
+    const mappedobj = TestModel.mapTo(myobj);
+    expect(mappedobj[0]).to.equal('outkey');
+    expect(mappedobj[1]).to.equal('outkey2');
+    expect(mappedobj[2]).to.equal('okay');
+
+    done();
+  });
 });
